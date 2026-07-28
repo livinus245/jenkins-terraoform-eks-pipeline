@@ -17,7 +17,7 @@ pipeline {
     string(name: 'TF_STATE_KEY', defaultValue: 'eks/jenkins-eks.tfstate', description: 'S3 key for Terraform state.')
     string(name: 'TFVARS_FILE', defaultValue: 'terraform.tfvars.example', description: 'Optional repository-relative Terraform variable file.')
     string(name: 'CLUSTER_NAME', defaultValue: 'jenkins-eks', description: 'EKS cluster name.')
-    string(name: 'KUBERNETES_VERSION', defaultValue: '', description: 'EKS Kubernetes version. Empty uses the current AWS default.')
+    string(name: 'KUBERNETES_VERSION', defaultValue: '1.36', description: 'EKS Kubernetes version. Empty uses the current AWS default.')
     string(name: 'ENVIRONMENT', defaultValue: 'production', description: 'Environment tag value.')
     string(name: 'NODE_INSTANCE_TYPE', defaultValue: 't3.medium', description: 'Managed-node EC2 instance type.')
     string(name: 'NODE_MIN_SIZE', defaultValue: '1', description: 'Minimum managed-node count.')
