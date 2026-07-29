@@ -12,8 +12,8 @@ pipeline {
   parameters {
     choice(name: 'ACTION', choices: ['PLAN', 'INIT', 'APPLY', 'DESTROY'], description: 'Terraform action. Pull requests always run PLAN regardless of this value.')
     string(name: 'AWS_CREDENTIALS_ID', defaultValue: 'aws-jenkins-terraform', description: 'Jenkins AWS Credentials credential ID.')
-    string(name: 'EXPECTED_AWS_ACCOUNT_ID', defaultValue: '768477844960', description: 'Expected 12-digit AWS account ID guardrail.')
-    string(name: 'TF_STATE_BUCKET', defaultValue: '2026-state', description: 'Existing us-east-1 S3 bucket for Terraform state.')
+    string(name: 'EXPECTED_AWS_ACCOUNT_ID', defaultValue: '582719176570', description: 'Expected 12-digit AWS account ID guardrail.')
+    string(name: 'TF_STATE_BUCKET', defaultValue: '2026-state-us-east-1', description: 'Existing us-east-1 S3 bucket for Terraform state.')
     string(name: 'TF_STATE_KEY', defaultValue: 'eks/jenkins-eks.tfstate', description: 'S3 key for Terraform state.')
     string(name: 'TFVARS_FILE', defaultValue: 'terraform.tfvars.example', description: 'Optional repository-relative Terraform variable file.')
     string(name: 'CLUSTER_NAME', defaultValue: 'jenkins-eks', description: 'EKS cluster name.')
